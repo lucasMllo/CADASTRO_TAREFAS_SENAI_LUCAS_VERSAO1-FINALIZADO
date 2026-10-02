@@ -27,14 +27,45 @@
                 <h1>Minhas tarefas</h1>
             </div>
 
-            <button
-                id="botao-tema"
-                class="botao-tema"
-                type="button"
-                title="Mudar para tema claro"
-            >
-                <i class="fa-solid fa-sun"></i>
-            </button>
+            <div class="botoes-cabecalho">
+
+                <button
+                    id="botao-historico"
+                    class="botao-extra"
+                    type="button"
+                    title="Ver histórico"
+                >
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                </button>
+
+                <button
+                    id="botao-meta"
+                    class="botao-extra"
+                    type="button"
+                    title="Meta diária"
+                >
+                    <i class="fa-solid fa-bullseye"></i>
+                </button>
+
+                <button
+                    id="botao-requisitos"
+                    class="botao-extra"
+                    type="button"
+                    title="Checar requisitos funcionais"
+                >
+                    <i class="fa-solid fa-clipboard-check"></i>
+                </button>
+
+                <button
+                    id="botao-tema"
+                    class="botao-tema"
+                    type="button"
+                    title="Mudar para tema claro"
+                >
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+
+            </div>
         </header>
 
         <div class="caixa-entrada">
@@ -70,6 +101,177 @@
         </footer>
 
     </div>
+
+    <!-- MODAL DO HISTÓRICO -->
+
+    <div id="modal-historico" class="modal">
+        <div class="conteudo-modal">
+
+            <div class="cabecalho-modal">
+                <div>
+                    <span class="subtitulo">REGISTROS</span>
+                    <h2>Histórico de atividades</h2>
+                </div>
+
+                <button
+                    id="fechar-historico"
+                    class="fechar-modal"
+                    type="button"
+                >
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div id="lista-historico" class="lista-historico">
+                <p class="historico-vazio">
+                    Nenhuma atividade registrada.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- MODAL DA META DIÁRIA -->
+
+    <div id="modal-meta" class="modal">
+        <div class="conteudo-modal modal-meta">
+
+            <div class="cabecalho-modal">
+                <div>
+                    <span class="subtitulo">PRODUTIVIDADE</span>
+                    <h2>Meta diária</h2>
+                </div>
+
+                <button
+                    id="fechar-meta"
+                    class="fechar-modal"
+                    type="button"
+                >
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="area-meta">
+
+                <p>
+                    Quantas tarefas você deseja concluir hoje?
+                </p>
+
+                <div class="entrada-meta">
+
+                    <input
+                        type="number"
+                        id="campo-meta"
+                        min="1"
+                        max="100"
+                        placeholder="Ex: 5"
+                    >
+
+                    <button
+                        id="botao-definir-meta"
+                        class="botao-principal"
+                        type="button"
+                    >
+                        Definir
+                    </button>
+
+                </div>
+
+                <div class="progresso-meta">
+
+                    <div class="texto-progresso">
+                        <span>Progresso de hoje</span>
+                        <strong id="texto-meta">0 / 0</strong>
+                    </div>
+
+                    <div class="barra-progresso">
+                        <div
+                            id="barra-meta"
+                            class="preenchimento-meta"
+                        ></div>
+                    </div>
+
+                    <p id="mensagem-meta">
+                        Defina uma meta para começar.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- MODAL DOS REQUISITOS FUNCIONAIS -->
+
+    <div id="modal-requisitos" class="modal">
+        <div class="conteudo-modal">
+
+            <div class="cabecalho-modal">
+                <div>
+                    <span class="subtitulo">FUNCIONALIDADES</span>
+                    <h2>Requisitos Funcionais</h2>
+                </div>
+
+                <button
+                    id="fechar-requisitos"
+                    class="fechar-modal"
+                    type="button"
+                >
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="lista-requisitos">
+
+                <div class="requisito">
+                    <div class="icone-requisito verde">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+
+                    <div>
+                        <strong>RF01 — Histórico de atividades</strong>
+
+                        <p>
+                            O sistema registra o horário em que cada tarefa
+                            foi adicionada, concluída ou excluída.
+                        </p>
+
+                        <span>
+                            Quando uma tarefa é concluída, o sistema também
+                            informa o tempo que levou desde sua criação até
+                            a conclusão.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="requisito">
+                    <div class="icone-requisito roxo">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+
+                    <div>
+                        <strong>RF02 — Meta diária</strong>
+
+                        <p>
+                            O sistema permite definir uma quantidade de
+                            tarefas para serem concluídas durante o dia.
+                        </p>
+
+                        <span>
+                            O progresso é atualizado automaticamente conforme
+                            as tarefas são concluídas.
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
 
     <script src="script.js"></script>
 
